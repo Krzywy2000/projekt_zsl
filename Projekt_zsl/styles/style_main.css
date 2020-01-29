@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+header {
+    width: 100%;
+}
+
+.navibar {
+    height: 20%;
+    border: 1px solid silver;
+    text-align: center;
+    padding-top: 5%;
+    box-sizing: border-box;
+}
+
+.navibar:hover {
+    background: rgb(187, 187, 187);
+}
+
+.navibar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navibar a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.headline {
+    border-bottom: 1px solid silver;
+}
