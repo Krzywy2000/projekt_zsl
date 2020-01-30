@@ -2,7 +2,7 @@
     <div class="container"><br/><br/>
         <H2 class="headline">Wiadomości odebrane</H2>
         <div class="messages__bar">
-            <button>Nowa wiadomość</button>
+            <button onClick="location.href='index_admin.php?page=new_message'">Nowa wiadomość</button>
             <button>Kosz</button>
             <button>Wysłane</button>
         </div><br/>
