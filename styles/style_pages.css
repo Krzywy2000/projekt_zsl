@@ -68,3 +68,7 @@ input {
 .button {
     border-radius: 20px;
 }
+
+.messages__bar {
+    text-align: right;
+}
