@@ -45,15 +45,15 @@
 				unset($_SESSION['blad']);
 				$result->free_result();
 
-				$date = date("Y-m-d");
-				mysqli_query("UPDATE users SET last_login = '$ip' WHERE id = '$_SESSION[id]'");
+				//$date = date("Y-m-d");
+				//mysqli_query("UPDATE users SET last_login = '$ip' WHERE id = '$_SESSION[id]'");
 				
-				if($_SESSION['access'] == 'admin')
+				if($_SESSION['access'] == '3')
 				{
 					header('Location: ../../index_admin.php');
 				}
 				
-				if($_SESSION['access'] == 'uczen')
+				if($_SESSION['access'] == '1')
 				{
 					header('Location: ../../index_student.php');
 				}

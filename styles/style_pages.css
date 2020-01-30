@@ -51,7 +51,6 @@ footer .col-sm-12 {
 }
 
 table, tr, td {
-    border: 1px solid silver;
     text-align: center;
     width: inherit;
     height: 40%;
@@ -63,5 +62,9 @@ table .main {
 }
 
 input {
+    border-radius: 20px;
+}
+
+.button {
     border-radius: 20px;
 }

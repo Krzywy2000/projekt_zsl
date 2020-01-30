@@ -1,6 +1,6 @@
 <?php
 
-    if($_SESSION['access'] == 'admin')
+    if($_SESSION['access'] == '3')
     {
         echo '<a class="dropdown-item" href="#">Panel</a>';
         echo '<a class="dropdown-item" href="index_admin.php?page=messages">Wiadomości</a>';
@@ -10,7 +10,7 @@
         echo '<a class="dropdown-item" href="./scripts/php/logoff.php">Wyloguj</a>';
     }
 
-    if($_SESSION['access'] == 'uczen')
+    if($_SESSION['access'] == '1')
     {
         echo '<a>'.$_SESSION['name'].' '.$_SESSION['surname'].'</a>';
         echo '<a class="dropdown-item" href="#">Panel</a>';

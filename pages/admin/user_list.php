@@ -22,14 +22,15 @@
                     {
                         while($row = $result->fetch_array())
                         {
-                        echo "<tr>
-                            <td>".$row['name']."</td>
-                            <td>".$row['surname']."</td>
-                            <td>".$row['email']."</td>
-                            <td>".$row['last_login']."</td>
-                            <td>".$row['ip']."</td>
-                            <td>".$row['access']."</td>
-                        </tr>";
+                            echo "<tr>
+                                <td>".$row['name']."</td>
+                                <td>".$row['surname']."</td>
+                                <td>".$row['email']."</td>
+                                <td>".$row['last_login']."</td>
+                                <td>".$row['ip']."</td>
+                                <td>".$row['access']."</td>
+                                <td><button class='button'>Zmień dane</button></td>
+                            </tr>";
                         }
                     }
                     echo "</table>";

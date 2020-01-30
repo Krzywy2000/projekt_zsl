@@ -26,12 +26,12 @@
             <div class="col-sm-12">
                 <nav class="navbar navbar-expand navbar-dark">
                     <a class="navbar-brand" href="<?php
-                        if($_SESSION['access']=="admin")
+                        if($_SESSION['access']=="3")
                         {
                             echo "index_admin.php";
                         }
 
-                        if($_SESSION['access'] == "uczen")
+                        if($_SESSION['access'] == "1")
                         {
                             echo "index_student.php";
                         }
