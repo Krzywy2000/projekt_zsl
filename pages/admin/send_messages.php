@@ -1,10 +1,10 @@
 <main>
     <div class="container"><br/><br/>
-        <H2 class="headline">Wiadomości odebrane</H2>
+        <H2 class="headline">Wiadomości wysłane</H2>
         <div class="messages__bar">
             <button onClick="location.href='index_admin.php?page=new_message'">Nowa wiadomość</button>
             <button>Kosz</button>
-            <button onClick="location.href='index_admin.php?page=send_messages.php'">Wysłane</button>
+            <button onClick="location.href='index_admin.php?page=messages.php">Odebrane</button>
         </div><br/>
         
         <?php

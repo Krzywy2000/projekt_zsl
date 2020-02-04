@@ -69,6 +69,10 @@ input {
     border-radius: 20px;
 }
 
+.button:hover {
+    background: grey;
+}
+
 .messages__bar {
     text-align: right;
 }

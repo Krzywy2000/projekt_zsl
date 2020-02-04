@@ -4,6 +4,10 @@
         $connect = new mysqli($host, $db_user, $db_password, $db_name);
     ?>
     <div class="container"><br/><br/>
+        <div class="messages__bar">
+            <button class="button">Dodaj nowego użytkownika</button>
+            <button class="button">Znajdź użytkownika</button>
+        </div>
         <H2 class="headline">Lista użytkowników</H2>
         <?php
             if ($result = @$connect->query("SELECT * FROM `users`"))

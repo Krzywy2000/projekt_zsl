@@ -33,6 +33,19 @@
 
                     echo "</select>";
 
+                    echo "<form>";
+                    echo "<select multiple='multiple' size='15'>";
+                    if($result2 = @$connect->query("SELECT * FROM `users`"))
+                    {
+                        $users2 = $result2->num_rows;
+                        while($row2 = $result2->fetch_array())
+                        {
+                            echo "<option>".$row2['name']." ".$row2['surname']."</option>";
+                        }
+                    }
+                    echo "</select>
+                    </form>";
+
                     $connect->close();
                 ?>
             </div>
