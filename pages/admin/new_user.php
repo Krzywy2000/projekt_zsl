@@ -46,5 +46,13 @@
             </select><br/><br/>
             <input type="submit" value="Dodaj" name="Add"/>
         </form>
+        <H2>Dodaj wielu nowych użytkowników</H2>
+        <H6>Jeżeli nie chcesz dodać wszystkich użytkowników ręcznie wgraj wcześniej przygotowany plik .csv</H6>
+        <form method="POST" action="./scripts/php/new_user_csv.php">
+            <input type="file" name="file"/></br></br>
+            <a>Czym są oddzielone kolumny:</a>
+            <input type="text" name="separator"/></br></br>
+            <input type="submit" value="Dodaj" name="Add"/>
+        </form>
     </div>
 </main>

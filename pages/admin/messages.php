@@ -4,7 +4,7 @@
         <div class="messages__bar">
             <button onClick="location.href='index_admin.php?page=new_message'">Nowa wiadomość</button>
             <button>Kosz</button>
-            <button onClick="location.href='index_admin.php?page=send_messages.php'">Wysłane</button>
+            <button onClick="location.href='index_admin.php?page=send_messages'">Wysłane</button>
         </div><br/>
         
         <?php
