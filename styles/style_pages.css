@@ -76,3 +76,7 @@ input {
 .messages__bar {
     text-align: right;
 }
+
+.messages__bar__left {
+    float: left;
+}
