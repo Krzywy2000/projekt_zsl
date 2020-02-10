@@ -20,27 +20,26 @@
                     require_once("./scripts/php/db_connect.php");
                     $connect = new mysqli($host, $db_user, $db_password, $db_name);
 
-                    echo "<select>";
-
-                    if($result = @$connect->query("SELECT * FROM `access`"))
-                    {
-                        $users = $result->num_rows;
-                        while($row = $result->fetch_array())
-                        {
-                            echo "<option>".$row['name']."</option>";
-                        }
-                    }
-
-                    echo "</select>";
-
+                    echo "<form method='POST' action='index_admin.php?page=new_message'>
+                    <select name='option'>
+                        <option>All</option>
+                        <option>Uczniowie</option>
+                        <option>Nauczyciele</option>
+                        <option>Rodzice</option>
+                        <option>Administratorzy</option>
+                    </select>
+                    </form>";
+                    ?>
+                    <?php
                     echo "<form>";
-                    echo "<select multiple='multiple' size='15'>";
+
+                    $check = $_POST['option'];
                     if($result2 = @$connect->query("SELECT * FROM `users`"))
                     {
                         $users2 = $result2->num_rows;
                         while($row2 = $result2->fetch_array())
                         {
-                            echo "<option>".$row2['name']." ".$row2['surname']."</option>";
+                            echo "<br/><input type='checkbox'>".$row2['name']." ".$row2['surname']."<br/>";
                         }
                     }
                     echo "</select>

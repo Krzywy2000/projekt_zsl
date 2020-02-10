@@ -1,13 +1,12 @@
 <?php
     include_once("db_connect.php");
 
-    //if(isset($_POST('file'))) {
-        $file = $_POST('file');
+        $file = $_POST['file'];
         $row = 1;
-        $separator = $_POST('separator');
+        $separator = $_POST['separator'];
         $csv = fopen($file,"r");
 
-        while(($data = str_getcsv($csv,$separator,'"')) !==FALSE) {
+        while(($data = fgetcsv($csv,$separator,'"')) !==FALSE) {
             $num = count($data);
             $row++;
             
@@ -16,5 +15,4 @@
             }
         }
         fclose($csv);
-    //}
 ?>

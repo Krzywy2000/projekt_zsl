@@ -19,6 +19,7 @@
 
         <!--Meta_tags!-->
         <meta author="Wiktor Wiese">
+        <meta charset="UTF-8">
 
     </head>
     <body>

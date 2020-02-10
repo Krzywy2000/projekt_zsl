@@ -80,3 +80,7 @@ input {
 .messages__bar__left {
     float: left;
 }
+
+.result {
+    width: 100%;
+}
