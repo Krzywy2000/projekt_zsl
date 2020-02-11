@@ -84,3 +84,13 @@ input {
 .result {
     width: 100%;
 }
+
+.mess_users {
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+}

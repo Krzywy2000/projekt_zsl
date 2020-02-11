@@ -1,4 +1,8 @@
 <main>
+    <?php 
+        require_once("scripts/php/db_connect.php");
+        $connect = new mysqli($host, $db_user, $db_password, $db_name);
+    ?>
     <div class="container"><br/>
             <H3 class="headline">Nowa wiadomość</H3>
             <div class="messages__bar">
@@ -8,6 +12,7 @@
             </div><br/>
         <div class="row">
             <div class="col-md-6">
+
                 <form>
                     <a>Temat:</a>
                     <input type="text"/><br/><br/>
@@ -20,34 +25,32 @@
                     require_once("./scripts/php/db_connect.php");
                     $connect = new mysqli($host, $db_user, $db_password, $db_name);
 
-                    echo "<form method='POST' action='index_admin.php?page=new_message'>
-                    <select name='option'>
-                        <option>All</option>
-                        <option>Uczniowie</option>
-                        <option>Nauczyciele</option>
-                        <option>Rodzice</option>
-                        <option>Administratorzy</option>
+                    echo "<form id='form'>
+                    <select id='option'>
+                        <option value='5'>All</option>
+                        <option value='1'>Uczniowie</option>
+                        <option value='2'>Nauczyciele</option>
+                        <option value='4'>Rodzice</option>
+                        <option value='3'>Administratorzy</option>
                     </select>
                     </form>";
                     ?>
+                <div id="result" class="mess_users">
                     <?php
-                    echo "<form>";
-
-                    $check = $_POST['option'];
-                    if($result2 = @$connect->query("SELECT * FROM `users`"))
-                    {
-                        $users2 = $result2->num_rows;
-                        while($row2 = $result2->fetch_array())
-                        {
-                            echo "<br/><input type='checkbox'>".$row2['name']." ".$row2['surname']."<br/>";
-                        }
-                    }
-                    echo "</select>
-                    </form>";
-
-                    $connect->close();
-                ?>
+                            if($result = @$connect->query("SELECT * FROM `users`"))
+                            {
+                                $users = $result->num_rows;
+                                while($row = $result->fetch_array())
+                                {
+                                    echo "<br/><input type='checkbox'>".$row['name']." ".$row['surname']."<br/>";
+                                }
+                            }
+                    
+                        echo "</form>";
+                    ?>
+                </div><br/><br/>
             </div>
         </div>
     </div>
+    <script src="scripts/js/search_mess.js"></script>
 </main>
