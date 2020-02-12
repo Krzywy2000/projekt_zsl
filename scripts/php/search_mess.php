@@ -4,6 +4,7 @@
     
     $search = $_GET["search_mess"];
     
+    echo "<form id='form_mess'>";
     if($search < 5)
     {
         if($result = @$connect->query("SELECT * FROM `users` WHERE `access`=".$search.""))

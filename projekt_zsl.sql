@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 30 Sty 2020, 01:38
--- Wersja serwera: 10.1.32-MariaDB
--- Wersja PHP: 7.0.30
+-- Czas generowania: 12 Lut 2020, 00:33
+-- Wersja serwera: 10.1.38-MariaDB
+-- Wersja PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -69,6 +69,23 @@ CREATE TABLE `grades_math` (
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `messages`
+--
+
+CREATE TABLE `messages` (
+  `id_mess` int(11) NOT NULL,
+  `mess` text COLLATE utf8_polish_ci NOT NULL,
+  `from_mess` int(11) NOT NULL,
+  `to_mess` int(11) NOT NULL,
+  `readed` tinyint(4) NOT NULL,
+  `data_mess` date NOT NULL,
+  `subject` varchar(30) COLLATE utf8_polish_ci NOT NULL,
+  `record` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `users`
 --
 
@@ -89,7 +106,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user`, `pass`, `ip`, `last_login`, `email`, `access`, `name`, `surname`) VALUES
-(1, 'admin', 'admin', 0, '0000-00-00', 'admin@admin.pl', 3, NULL, NULL),
+(1, 'admin', 'admin', 0, '0000-00-00', 'admin@admin.pl', 3, 'Administrator', NULL),
 (2, 'user', 'user', 0, '0000-00-00', 'user@user.pl', 1, 'Jan', 'Kowalski'),
 (3, 'snowak', 'snowak', 0, '0000-00-00', 'snowak@o2.pl', 1, 'Stanisław', 'Nowak'),
 (4, 'wwiese', 'wwiese', 0, '0000-00-00', 'wiktorwiese@o2.pl', 2, 'Wiktor', 'Wiese'),
@@ -116,6 +133,12 @@ ALTER TABLE `class`
 --
 ALTER TABLE `grades_math`
   ADD PRIMARY KEY (`id_grades_math`);
+
+--
+-- Indeksy dla tabeli `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id_mess`);
 
 --
 -- Indeksy dla tabeli `users`
@@ -146,6 +169,12 @@ ALTER TABLE `class`
 --
 ALTER TABLE `grades_math`
   MODIFY `id_grades_math` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id_mess` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
