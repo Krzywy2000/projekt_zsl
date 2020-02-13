@@ -2,7 +2,7 @@
     require_once("db_connect.php");
     $connect = new mysqli($host, $db_user, $db_password, $db_name);
     
-    $receiver = $_GET["receiver"];
+    $receiver = $_GET["receiver[".$i."]"];
     
     echo "<a>Odbiorcy:</a><br/>";
     while($receiver[$i] > 5) {

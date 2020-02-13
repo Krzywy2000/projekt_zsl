@@ -1,8 +1,8 @@
-document.getElementById("receiver").addEventListener("click", receiver);
+document.getElementById("receiver[]").addEventListener("click", receiver);
  
 function receiver() {
     
-    var receiver = document.getElementById("receiver").value;
+    var receiver = document.getElementById("receiver[]").value;
      
         var ajax = new XMLHttpRequest();
          

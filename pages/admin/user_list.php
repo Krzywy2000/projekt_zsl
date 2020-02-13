@@ -3,6 +3,9 @@
         require_once("scripts/php/db_connect.php");
         $connect = new mysqli($host, $db_user, $db_password, $db_name);
     ?>
+    <div class="pop-up_hidden">
+
+    </div>
     <div class="container"><br/><br/>
         <H2 class="headline">Lista użytkowników</H2>
         <div class="messages__bar__left">
@@ -39,7 +42,7 @@
                                     <td>".$row['last_login']."</td>
                                     <td>".$row['ip']."</td>
                                     <td>".$row['access']."</td>
-                                    <td><button class='button'>Edytuj</button></td>
+                                    <td><button class='button' id='edit'>Edytuj</button></td>
                                 </tr>";
                             }
                         }
@@ -49,4 +52,5 @@
         </div>        
     <br/><br/></div>
     <script src="scripts/js/search.js"></script>
+    <script src="scripts/js/pop_up.js"></script>
 </main>

@@ -42,7 +42,7 @@
                 <div id="result" class="mess_users">
                     <?php
 
-                        echo "<form name='form_mess' id='form_mess'>";
+                        echo "<form name='form_mess' id='form_mess'><br/>";
                             if($result = @$connect->query("SELECT * FROM `users`"))
                             {
                                 $i = 0;
@@ -50,9 +50,8 @@
                                 while($row = $result->fetch_array())
                                 {                                    
                                     $i++;
-                                    echo "<br/><input type='checkbox' id='receiver[".$i."]' name='receiver' value='".$row['name']."_".$row['surname']."'>".$row['name']." ".$row['surname']."<br/>";
+                                    echo "<br/><input type='checkbox' id='receiver[".$i."]' name='receiver[]' value='".$row['name']."_".$row['surname']."'>".$row['name']." ".$row['surname']."<br/>";
                                 }
-                                echo $receiver[$i];
                             }
                     
                         echo "</form>";
